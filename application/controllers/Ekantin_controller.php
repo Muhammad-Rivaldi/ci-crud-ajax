@@ -29,8 +29,8 @@ class Ekantin_controller extends CI_Controller
     // membuka halaman default
     public function index()
     {
-        $data['menu'] = $this->model_system->tampil_menu();
-        $this->load->view('admin/index', $data);
+        // $data['menu'] = $this->model_system->tampil_menu();
+        $this->load->view('admin/index');
     }
 
     // membuka halaman login

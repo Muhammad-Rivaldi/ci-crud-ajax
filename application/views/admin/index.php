@@ -29,7 +29,7 @@
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <?php $this->load->view('template/admin/sidebar')?>
+    <?php $this->load->view('template/admin/sidebar') ?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -63,47 +63,46 @@
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 class="m-0 font-weight-bold text-primary">view data menu</h6>
                   <div class="dropdown no-arrow">
-								<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									<i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-									<div class="dropdown-header">Action</div>
-									<a class="dropdown-item addbtn">
-										<i class="fas fa-plus fa-sm fa-fw" style="color: green;">
-										</i> Add Data
-									</a>
-									<!-- <a class="dropdown-item" href="<?php echo site_url('homecontroller/cetakData') ?>">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Action</div>
+                      <a class="dropdown-item addbtn">
+                        <i class="fas fa-plus fa-sm fa-fw" style="color: green;">
+                        </i> Add Data
+                      </a>
+                      <!-- <a class="dropdown-item" href="<?php echo site_url('homecontroller/cetakData') ?>">
 										<i class="fas fa-file fa-sm fa-fw" style="color: blue;">
 										</i> Generate Pdf
-									</a>
 									<a class="dropdown-item" href="<?php echo site_url('homecontroller/cetakExcel') ?>">
 										<i class="fas fa-table fa-sm fa-fw" style="color: green;">
 										</i> Generate Excel
 									</a> -->
-								</div>
-							</div>
+                    </div>
+                  </div>
                 </div>
                 <!-- end Card Header - Dropdown -->
 
                 <!-- Card Body -->
                 <div class="card-body">
-                <div class="table-responsive">
-								<table class="table table-bordered text-center" cellspacing="0" width="100%" id="dataMakanan">
-									<thead class="bg-primary text-white">
-										<tr>
-											<th>Id Makanan</th>
-											<th>Nama Makanan</th>
-											<th>Foto Makanan</th>
-											<th>Jenis Menu</th>
-											<th>Harga</th>
-											<th>Status Menu</th>
-											<th>Action</th>
-										</tr>
-									</thead>
-									<tbody>
-									</tbody>
-								</table>
-							</div>
+                  <div class="table-responsive">
+                    <table class="table table-bordered text-center" cellspacing="0" width="100%" id="dataMakanan">
+                      <thead class="bg-primary text-white">
+                        <tr>
+                          <th>Id Makanan</th>
+                          <th>Nama Makanan</th>
+                          <th>Foto Makanan</th>
+                          <th>Jenis Menu</th>
+                          <th>Harga</th>
+                          <th>Status Menu</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <!-- end card body -->
 
@@ -165,13 +164,6 @@
   <!-- Custom scripts for all pages-->
   <script src="<?php echo base_url('asset/js/sb-admin-2.js') ?>"></script>
 
-  <!-- Page level plugins -->
-  <script src="<?php echo base_url('asset/vendor/chart.js/Chart.js') ?>"></script>
-
-  <!-- Page level custom scripts -->
-  <script src="<?php echo base_url('asset/js/demo/chart-area-demo.js') ?>"></script>
-  <script src="<?php echo base_url('asset/js/demo/chart-pie-demo.js') ?>"></script>
-
   <!-- DataTable -->
   <script src="<?php echo base_url('asset/vendor/datatables/jquery.dataTables.min.js') ?>"></script>
   <script src="<?php echo base_url('asset/vendor/datatables/dataTables.bootstrap4.min.js') ?>"></script>
@@ -181,114 +173,115 @@
 
   <!-- Add Modal -->
   <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Add Data</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<form id="formtambah" method="post">
-						<div class="modal-body">
-							<div class="form-group">
-								<label>Nama Makanan</label>
-								<input type="text" name="namabarang" id="nmabarang" class="form-control" placeholder="Masukkan Nama Makanan">
-							</div>
-              <div class="form-group">
-                <label>Picture</label>
-                <input type="file" name="user_image" id="user_image" class="form-control">
-              </div>
-              <div class="form-group">
-                <label>Jenis Makanan</label>
-                <select class="custom-select drpdw" name="kategoriitem" id="ktgritem">
-                  <option selected>Select Category</option>
-                  <option value="makanan">Makanan</option>
-                  <option value="minuman">Minuman</option>
-                </select>
-              </div>
-							<div class="form-group">
-                <label>Harga Makanan</label>
-								<input type="text" name="hargabarang" id="hrgbarang" class="form-control" placeholder="Masukkan Harga Makanan">
-							</div>
-							<input value="tersedia" type="hidden" id="statusbarang" name="status" class="form-control">
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-							<input type="hidden" name="action" class="btn btn-success" value="Add" />
-							<input type="submit" value="Add" name="action" class="btn btn-success" />
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Data</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="formtambah" method="post">
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Nama Makanan</label>
+              <input type="text" name="namabarang" id="nmabarang" class="form-control" placeholder="Masukkan Nama Makanan">
+            </div>
+            <div class="form-group">
+              <label>Picture</label>
+              <input type="file" name="user_image" id="user_image" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Jenis Makanan</label>
+              <select class="custom-select drpdw" name="kategoriitem" id="ktgritem">
+                <option selected>Select Category</option>
+                <option value="makanan">Makanan</option>
+                <option value="minuman">Minuman</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Harga Makanan</label>
+              <input type="text" name="hargabarang" id="hrgbarang" class="form-control" placeholder="Masukkan Harga Makanan">
+            </div>
+            <input value="tersedia" type="hidden" id="statusbarang" name="status" class="form-control">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <input type="hidden" name="action" class="btn btn-success" value="Add" />
+            <input type="submit" value="Add" name="action" class="btn btn-success" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- end add modal -->
 
 </body>
 
 <script>
-  $(document).ready(function () {
+  $(document).ready(function() {
     // add btn modal
-    $('.addbtn').on('click', function () { 
-        $('#addModal').modal('show');
-     });
+    $('.addbtn').on('click', function() {
+      $('#addModal').modal('show');
+    });
 
     // ini adalah fungsi untuk memunculkan data di datatable
-		var datamakanan = $('#dataMakanan').DataTable({
-			"processing": true,
-			"ajax": "<?= base_url("ekantin_controller/dataMakanan") ?>",
-			"order": [],
-		});
+    var datamakanan = $('#dataMakanan').DataTable({
+      "processing": true,
+      "ajax": "<?= base_url("ekantin_controller/dataMakanan") ?>",
+      "order": [],
+    });
 
     // add function
     // Tambah barang
-		$(document).on('submit', '#formtambah', function(event) {
-			event.preventDefault();
-			var namamakanan = $('#nmabarang').val();
-			var hargamakanan = $('#hrgbarang').val();
-			var kategorimakanan = $('#ktgritem').val();
-			var extension = $('#user_image').val().split('.').pop().toLowerCase();
-			if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
-				alert("Invalid Image");
-				$('#user_image').val('');
-				return false;
-			}
+    $(document).on('submit', '#formtambah', function(event) {
+      event.preventDefault();
+      var namamakanan = $('#nmabarang').val();
+      var hargamakanan = $('#hrgbarang').val();
+      var kategorimakanan = $('#ktgritem').val();
+      var extension = $('#user_image').val().split('.').pop().toLowerCase();
+      if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+        alert("Invalid Image");
+        $('#user_image').val('');
+        return false;
+      }
 
-			if (namamakanan != '' && hargamakanan != '' && kategorimakanan != '') {
-				$.ajax({
-					type: "post",
-					url: "<?= base_url("ekantin_controller/addData") ?>",
-					beforeSend: function() {
-						swal({
+      if (namamakanan != '' && hargamakanan != '' && kategorimakanan != '') {
+        $.ajax({
+          type: "post",
+          url: "<?= base_url("ekantin_controller/addData") ?>",
+          beforeSend: function() {
+            swal({
               type: 'loading',
-							title: 'Menunggu',
-							html: 'Memproses data',
-							onOpen: () => {
-								swal.showLoading()
-							}
-						})
-					},
-					data: new FormData(this),
-					contentType: false,
-					processData: false,
-					success: function() {
-						swal({
-							type: 'success',
-							title: 'Tambah Barang',
-							text: 'Anda Berhasil Menambah Barang'
-						})
-						$('#formtambah')[0].reset();
-						$('#addModal').modal('hide');
-						datamakanan.ajax.reload(null, false);
-					},
-				});
-			} else {
-				Swal.fire({
-					icon: 'error',
-					title: 'Oops...',
-					text: 'Bother fields are required!',
-				});
-			}
-		});
+              title: 'Menunggu',
+              html: 'Memproses data',
+              onOpen: () => {
+                swal.showLoading()
+              }
+            })
+          },
+          data: new FormData(this),
+          contentType: false,
+          processData: false,
+          success: function() {
+            swal({
+              type: 'success',
+              title: 'Tambah Barang',
+              text: 'Anda Berhasil Menambah Barang'
+            })
+            $('#formtambah')[0].reset();
+            $('#addModal').modal('hide');
+            datamakanan.ajax.reload(null, false);
+          },
+        });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Bother fields are required!',
+        });
+      }
+    });
   });
 </script>
 

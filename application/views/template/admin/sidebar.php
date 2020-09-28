@@ -16,7 +16,8 @@
     <li class="nav-item <?php echo $this->uri->segment(2) == 'admin_dash' ? 'active': '' ?>">
         <a class="nav-link" href="<?php echo site_url('ekantin_controller/admin_dash') ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            <span>Dashboard</span>
+        </a>
     </li>
     <!-- end Nav Item - Dashboard -->
 
@@ -27,7 +28,8 @@
     <li class="nav-item <?php echo $this->uri->segment(2) == 'admin_menu' ? 'active': '' ?>">
         <a class="nav-link" href="<?php echo site_url('ekantin_controller/admin_menu') ?>">
             <i class="fas fa-utensils"></i>
-            <span>menu</span></a>
+            <span>menu</span>
+        </a>
     </li>
     <!-- end Nav Item - menu -->
 
@@ -57,7 +59,8 @@
     <li class="nav-item <?php echo $this->uri->segment(2) == 'admin_tran' ? 'active': '' ?>">
         <a class="nav-link" href="<?php echo site_url('ekantin_controller/admin_tran') ?>">
             <i class="fas fa-file-invoice"></i>
-            <span>transaksi</span></a>
+            <span>transaksi</span>
+        </a>
     </li>
     <!-- end Nav Item - transaksi -->
 
@@ -68,7 +71,8 @@
     <li class="nav-item <?php echo $this->uri->segment(2) == 'admin_order' ? 'active': '' ?>">
         <a class="nav-link" href="<?php echo site_url('ekantin_controller/admin_order') ?>">
             <i class="fas fa-info-circle"></i>
-            <span>pemesanan</span></a>
+            <span>pemesanan</span>
+        </a>
     </li>
     <!-- end Nav Item - pemesanan -->
 

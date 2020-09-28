@@ -254,11 +254,11 @@ class model_system extends CI_Model
     }
 
     // tampil data menu
-    public function tampil_menu()
-    {
-        $query = $this->db->query('SELECT * FROM `menus`');
-        return $query->result();        
-    }
+    // public function tampil_menu()
+    // {
+    //     $query = $this->db->query('SELECT * FROM `menus`');
+    //     return $query->result();        
+    // }
 
     // tampil data user
     public function tampil_user()

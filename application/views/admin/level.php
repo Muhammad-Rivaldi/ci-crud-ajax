@@ -48,7 +48,7 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Level</h1>
-                        <a href="#" data-toggle="modal" data-target="#insert_data" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white"></i> level</a>
+                        <a href="#" data-toggle="modal" data-target="#insert_data" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm"><i class="fas fa-plus fa-sm text-white"></i>level</a>
                     </div>
                     <!-- end Page Heading -->
 
@@ -79,7 +79,7 @@
                                             </thead>
                                             <tfoot>
                                                 <tr>
-                                                <th>no</th>
+                                                    <th>no</th>
                                                     <th>ID level</th>
                                                     <th>nama level</th>
                                                     <th>modifikasi</th>
